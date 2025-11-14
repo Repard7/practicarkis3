@@ -1,7 +1,10 @@
 from django.urls import path, include
 from rest_framework import renderers
 from rest_framework.urlpatterns import format_suffix_patterns
+
+from . import views
 from .views import SnippetViewSet, UserViewSet, api_root
+
 
 snippet_list = SnippetViewSet.as_view({
    'get': 'list',
@@ -30,7 +33,7 @@ urlpatterns = [
    path('users/<int:pk>/', user_detail, name='user-detail'),
    path('auth/', include('rest_framework.urls')),
    path('snippets/<int:pk>/highlight/', snippet_highlight, name='snippet-highlight'),
-   path('', views.api_root),
+   path('', views.api_root, name='api-root'),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
