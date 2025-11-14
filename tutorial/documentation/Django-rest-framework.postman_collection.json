@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "badecfa7-d714-462a-8a83-b568919851c7",
+		"name": "Django-rest-framework",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43203027"
+	},
+	"item": [
+		{
+			"name": "Добавление",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 1,\r\n    \"title\" : \"\",\r\n    \"code\" : \"foo = \\\"bar\\\"\",\r\n    \"linenos\" : false,\r\n    \"language\" : \"python\",\r\n    \"style\" : \"friendly\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/snippets/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"snippets",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ОтображениеВсех",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "ОтображениеОдного",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "УдалениеОдного",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/snippets/1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"snippets",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ИзменениеОдного",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/snippets/1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"snippets",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ОтображениеПользователей",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "HTMLотображениеСоСтилями",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base",
+			"value": "http://127.0.0.1:8000/api",
+			"type": "string"
+		}
+	]
+}
